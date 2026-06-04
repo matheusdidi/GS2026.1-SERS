@@ -14,7 +14,7 @@ Desenvolver uma solução computacional para monitorar sistemas de energia de um
 
 ## Tecnologias Utilizadas
 
-Python 3
+Python
 
 ## Como Executar
 
