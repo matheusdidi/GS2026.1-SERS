@@ -1,64 +1,57 @@
-# Sistema de Monitoramento Energético Espacial
+def analisar_missao(temperatura, energia, comunicacao):
 
-# GS2026.1 - SERS
+    alertas = []
 
-def analisar_missao(temperatura, energia, comunicacao, modulo):
+    if temperatura > 80:
+        alertas.append("Superaquecimento detectado")
 
-alertas = []
+    if energia < 20:
+        alertas.append("Nível crítico de energia")
 
-if temperatura > 80:
-    alertas.append("Superaquecimento detectado")
+    if comunicacao == 0:
+        alertas.append("Falha de comunicação")
 
-if energia < 20:
-    alertas.append("Nível crítico de energia")
+    print("\n===== RELATÓRIO DA MISSÃO =====")
 
-if comunicacao == 0:
-    alertas.append("Falha de comunicação")
+    print(f"Temperatura: {temperatura} °C")
+    print(f"Energia: {energia}%")
 
-print("\n===== RELATÓRIO DA MISSÃO =====")
+    if comunicacao == 1:
+        print("Comunicação: OK")
+    else:
+        print("Comunicação: FALHA")
 
-print(f"Temperatura: {temperatura} °C")
-print(f"Energia: {energia}%")
-print(f"Módulo: {modulo}")
+    print("\nALERTAS:")
 
-if comunicacao == 1:
-    print("Comunicação: OK")
-else:
-    print("Comunicação: FALHA")
+    if len(alertas) == 0:
+        print("Nenhum alerta detectado.")
+    else:
+        for alerta in alertas:
+            print("-", alerta)
 
-print("\nALERTAS:")
+    print("\nAÇÃO RECOMENDADA:")
 
-if len(alertas) == 0:
-    print("Nenhum alerta detectado.")
-else:
-    for alerta in alertas:
-        print("-", alerta)
+    if energia < 20:
+        print("- Ativar modo de economia de energia")
 
-print("\nAÇÃO RECOMENDADA:")
+    if temperatura > 80:
+        print("- Ativar sistema de resfriamento")
 
-if energia < 20:
-    print("- Ativar modo de economia energética")
+    if comunicacao == 0:
+        print("- Reiniciar sistema de comunicação")
 
-if temperatura > 80:
-    print("- Ativar sistema de resfriamento")
+    if len(alertas) == 0:
+        print("- Operação normal")
 
-if comunicacao == 0:
-    print("- Reiniciar sistema de comunicação")
-
-if len(alertas) == 0:
-    print("- Operação normal")
-```
 
 print("=== MONITORAMENTO DE MISSÃO ESPACIAL ===")
 
 temperatura = float(input("Temperatura (°C): "))
 energia = float(input("Energia (%): "))
 comunicacao = int(input("Comunicação (1=OK / 0=Falha): "))
-modulo = input("Status do módulo: ")
 
 analisar_missao(
-temperatura,
-energia,
-comunicacao,
-modulo
+    temperatura,
+    energia,
+    comunicacao,
 )
