@@ -2,7 +2,7 @@
 
 ## Objetivo
 
-Desenvolver uma solução computacional para monitorar sistemas energéticos de uma missão espacial experimental.
+Desenvolver uma solução computacional para monitorar sistemas de energia de uma missão espacial.
 
 ## Funcionalidades
 
