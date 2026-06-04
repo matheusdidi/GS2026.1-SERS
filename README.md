@@ -6,12 +6,12 @@ Desenvolver uma solução computacional para monitorar sistemas energéticos de 
 
 ## Funcionalidades
 
-Monitoramento de temperatura
-Monitoramento de energia
-Monitoramento de comunicação
-Monitoramento do status dos módulos
-Geração automática de alertas
-Recomendações para situações críticas
+* Monitoramento de temperatura
+* Monitoramento de energia
+* Monitoramento de comunicação
+* Monitoramento do status dos módulos
+* Geração automática de alertas
+* Recomendações para situações críticas
 
 ## Tecnologias Utilizadas
 
